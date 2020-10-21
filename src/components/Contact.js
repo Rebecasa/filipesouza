@@ -9,16 +9,18 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     backgroundColor: '#3d3e3a',
     justifyContent: 'space-around',
-    padding: theme.spacing(3,1),
+    padding: theme.spacing(14,1,3),
+     color: 'white',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column'
     },
   },
   img: {
     width: '45vw',
+    margin: theme.spacing(7,0),
     [theme.breakpoints.down('sm')]: {
       width:'100%',
-      marginTop: theme.spacing(1),
+      margin: theme.spacing(3,0),
     },
   },
   body:{
@@ -30,7 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   link: {
+    display: 'flex',
     color: 'white',
+    justifyContent:'center',
+  },
+  liknkKey:{
+    marginRight: theme.spacing(1.5),
   },
 
 }));
@@ -41,16 +48,23 @@ export default function Contact() {
   return (
     <div id='contact' className={classes.root}>
       <div className={classes.body}>
+      <Typography variant="h6">
+        Personal Trainner Location:
+        </Typography>
+        <Typography> John Reed Fitness, Kreuzberg, Berlin</Typography>
+        <Typography> Kottbusser Damm 1, 10967, Berlin</Typography>
        <img className={classes.img} src={filipe} alt='filipe' />
         <Typography variant="h6">
         Book your class Now
         </Typography>
           <div className={classes.links}>
             <Link href='tel:+49 177 169 0204' className={classes.link}>
-              Phone/Whatsapp: +49 177 169 0204
+              <Typography className={classes.liknkKey}> Phone/Whatsapp:</Typography>
+              <Typography> +49 177 169 0204</Typography>
             </Link>
              <Link href='mailto:filipedesouzapersonaltrainer@gmail.com' className={classes.link}>
-               E-mail: filipedesouzapersonaltrainer@gmail.com
+               <Typography className={classes.liknkKey}> E-mail: </Typography>
+               <Typography> filipedesouzapersonaltrainer@gmail.com </Typography>
             </Link>
           </div>
 

@@ -30,9 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   certificate: {
     fontWeight: 700,
-     [theme.breakpoints.down('sm')]: {
-      textAlign: 'left',
-    },
   },
   certifications: {
     margin: theme.spacing(2,0)
